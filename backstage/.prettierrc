@@ -1,0 +1,7 @@
+{
+ 
+  "semi":false,
+  "singleQuote":true
+}
+ // semi 行后不加 ;
+ // singleQuote js代码字符串为 '' ;
