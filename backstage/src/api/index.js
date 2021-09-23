@@ -22,6 +22,8 @@ const instance = axios.create({
 // 设置请求拦截器
 instance.interceptors.request.use(config => {
   // 拦截请求, 格式化参数
+  // 添加token请求头
+  config.headers.Authorization = sessionStorage.getItem('token')
   return config
 })
 

@@ -2,16 +2,16 @@
 import Vue from "vue";
 
 import {
-  // Pagination,
-  // Dialog,
+  Pagination,
+  Dialog,
   // Autocomplete,
   // Dropdown,
   // DropdownMenu,
   // DropdownItem,
-  // Menu,
-  // Submenu,
-  // MenuItem,
-  // MenuItemGroup,
+  Menu,
+  Submenu,
+  MenuItem,
+  MenuItemGroup,
   Input,
   InputNumber,
   // Radio,
@@ -20,21 +20,21 @@ import {
   // Checkbox,
   // CheckboxButton,
   // CheckboxGroup,
-  // Switch,
+  Switch,
   // Select,
   // Option,
   // OptionGroup,
   Button,
   // ButtonGroup,
-  // Table,
-  // TableColumn,
+  Table,
+  TableColumn,
   // DatePicker,
   // TimeSelect,
   // TimePicker,
-  // Popover,
-  // Tooltip,
-  // Breadcrumb,
-  // BreadcrumbItem,
+  Popover,
+  Tooltip,
+  Breadcrumb,
+  BreadcrumbItem,
   Form,
   FormItem,
   // Tabs,
@@ -44,13 +44,13 @@ import {
   // Alert,
   // Slider,
   // Icon,
-  // Row,
-  // Col,
+  Row,
+  Col,
   // Upload,
   // Progress,
   // Spinner,
   // Badge,
-  // Card,
+  Card,
   // Rate,
   // Steps,
   // Step,
@@ -61,10 +61,10 @@ import {
   // Cascader,
   // ColorPicker,
   // Transfer,
-  // Container,
-  // Header,
-  // Aside,
-  // Main,
+  Container,
+  Header,
+  Aside,
+  Main,
   // Footer,
   // Timeline,
   // TimelineItem,
@@ -79,18 +79,19 @@ import {
   // MessageBox,
   Message,
   // Notification
+  Popconfirm
 } from 'element-ui';
 
-// Vue.use(Pagination);
-// Vue.use(Dialog);
+Vue.use(Pagination);
+Vue.use(Dialog);
 // Vue.use(Autocomplete);
 // Vue.use(Dropdown);
 // Vue.use(DropdownMenu);
 // Vue.use(DropdownItem);
-// Vue.use(Menu);
-// Vue.use(Submenu);
-// Vue.use(MenuItem);
-// Vue.use(MenuItemGroup);
+Vue.use(Menu);
+Vue.use(Submenu);
+Vue.use(MenuItem);
+Vue.use(MenuItemGroup);
 Vue.use(Input);
 Vue.use(InputNumber);
 // Vue.use(Radio);
@@ -99,21 +100,21 @@ Vue.use(InputNumber);
 // Vue.use(Checkbox);
 // Vue.use(CheckboxButton);
 // Vue.use(CheckboxGroup);
-// Vue.use(Switch);
+Vue.use(Switch);
 // Vue.use(Select);
 // Vue.use(Option);
 // Vue.use(OptionGroup);
 Vue.use(Button);
 // Vue.use(ButtonGroup);
-// Vue.use(Table);
-// Vue.use(TableColumn);
+Vue.use(Table);
+Vue.use(TableColumn);
 // Vue.use(DatePicker);
 // Vue.use(TimeSelect);
 // Vue.use(TimePicker);
-// Vue.use(Popover);
-// Vue.use(Tooltip);
-// Vue.use(Breadcrumb);
-// Vue.use(BreadcrumbItem);
+Vue.use(Popover);
+Vue.use(Tooltip);
+Vue.use(Breadcrumb);
+Vue.use(BreadcrumbItem);
 Vue.use(Form);
 Vue.use(FormItem);
 // Vue.use(Tabs);
@@ -123,13 +124,13 @@ Vue.use(FormItem);
 // Vue.use(Alert);
 // Vue.use(Slider);
 // Vue.use(Icon);
-// Vue.use(Row);
-// Vue.use(Col);
+Vue.use(Row);
+Vue.use(Col);
 // Vue.use(Upload);
 // Vue.use(Progress);
 // Vue.use(Spinner);
 // Vue.use(Badge);
-// Vue.use(Card);
+Vue.use(Card);
 // Vue.use(Rate);
 // Vue.use(Steps);
 // Vue.use(Step);
@@ -140,10 +141,10 @@ Vue.use(FormItem);
 // Vue.use(Cascader);
 // Vue.use(ColorPicker);
 // Vue.use(Transfer);
-// Vue.use(Container);
-// Vue.use(Header);
-// Vue.use(Aside);
-// Vue.use(Main);
+Vue.use(Container);
+Vue.use(Header);
+Vue.use(Aside);
+Vue.use(Main);
 // Vue.use(Footer);
 // Vue.use(Timeline);
 // Vue.use(TimelineItem);
@@ -154,6 +155,7 @@ Vue.use(FormItem);
 // Vue.use(Backtop);
 // Vue.use(PageHeader);
 // Vue.use(CascaderPanel);
+Vue.use(Popconfirm)
 
 // Vue.use(Loading.directive);
 
