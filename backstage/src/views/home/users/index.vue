@@ -76,7 +76,11 @@
                 </el-popconfirm>
                 <!-- 分配角色按钮 -->
                 <el-tooltip effect="dark" content="分配角色" placement="top">
-                  <el-button size="medium" type="warning">
+                  <el-button
+                    size="medium"
+                    type="warning"
+                    @click="userRoleShow(scope.row)"
+                  >
                     <i class="el-icon-s-help"></i>
                   </el-button>
                 </el-tooltip>
@@ -105,15 +109,22 @@
     <add-user
       v-if="addDialogVisible"
       :addShow.sync="addDialogVisible"
-      @addSuccess="getUserData"
+      @update-user-list="getUserData"
     ></add-user>
     <!-- 修改用户信息组件 -->
     <edit-user
       v-if="editDialogVisible"
       :editData="editData"
       :editShow.sync="editDialogVisible"
-      @editSuccess="getUserData"
+      @update-user-list="getUserData"
     ></edit-user>
+    <!-- 分配用户角色组件 -->
+    <user-role
+      v-if="userRoleVisible"
+      :user-role-visible.sync="userRoleVisible"
+      :user-role-info="userRoleInfo"
+      @update-user-list="getUserData"
+    ></user-role>
   </div>
 </template>
 
@@ -123,6 +134,8 @@ import http from '@/api/index.js'
 import EditUser from '@/components/editUserPopup/index.vue'
 // 添加用户组件
 import AddUser from '@/components/addUserPopup/index.vue'
+// 分配用户角色组件
+import UserRole from '@/components/userRolePopup/index.vue'
 export default {
   data() {
     return {
@@ -144,11 +157,16 @@ export default {
       addDialogVisible: false,
       // 发送到修改组件数据
       editData: {},
+      // 控制角色分配弹窗组件
+      userRoleVisible: false,
+      // 待分配角色用户的数据
+      userRoleInfo: '',
     }
   },
   methods: {
     // 获取用户数据
     async getUserData() {
+      console.log(111)
       const { data: res } = await http.get('users', {
         params: this.userParams,
       })
@@ -194,6 +212,11 @@ export default {
         this.getUserData()
       })
     },
+    // 显示分配用户角色弹窗
+    userRoleShow(userInfo) {
+      this.userRoleInfo = userInfo
+      this.userRoleVisible = true
+    },
   },
   created() {
     this.getUserData()
@@ -201,6 +224,7 @@ export default {
   components: {
     EditUser,
     AddUser,
+    UserRole,
   },
 }
 </script>

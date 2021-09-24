@@ -21,8 +21,8 @@ import {
   // CheckboxButton,
   // CheckboxGroup,
   Switch,
-  // Select,
-  // Option,
+  Select,
+  Option,
   // OptionGroup,
   Button,
   // ButtonGroup,
@@ -39,8 +39,8 @@ import {
   FormItem,
   // Tabs,
   // TabPane,
-  // Tag,
-  // Tree,
+  Tag,
+  Tree,
   // Alert,
   // Slider,
   // Icon,
@@ -76,7 +76,7 @@ import {
   // PageHeader,
   // CascaderPanel,
   // Loading,
-  // MessageBox,
+  MessageBox,
   Message,
   // Notification
   Popconfirm
@@ -101,8 +101,8 @@ Vue.use(InputNumber);
 // Vue.use(CheckboxButton);
 // Vue.use(CheckboxGroup);
 Vue.use(Switch);
-// Vue.use(Select);
-// Vue.use(Option);
+Vue.use(Select);
+Vue.use(Option);
 // Vue.use(OptionGroup);
 Vue.use(Button);
 // Vue.use(ButtonGroup);
@@ -119,8 +119,8 @@ Vue.use(Form);
 Vue.use(FormItem);
 // Vue.use(Tabs);
 // Vue.use(TabPane);
-// Vue.use(Tag);
-// Vue.use(Tree);
+Vue.use(Tag);
+Vue.use(Tree);
 // Vue.use(Alert);
 // Vue.use(Slider);
 // Vue.use(Icon);
@@ -162,7 +162,7 @@ Vue.use(Popconfirm)
 // Vue.prototype.$loading = Loading.service;
 // Vue.prototype.$msgbox = MessageBox;
 // Vue.prototype.$alert = MessageBox.alert;
-// Vue.prototype.$confirm = MessageBox.confirm;
+Vue.prototype.$confirm = MessageBox.confirm;
 // Vue.prototype.$prompt = MessageBox.prompt;
 // Vue.prototype.$notify = Notification;
 Vue.prototype.$message = Message;

@@ -4,7 +4,7 @@
     title="添加用户"
     :visible.sync="addShow"
     width="400px"
-    @close="closeDialog"
+    :before-close="closeDialog"
   >
     <!-- 添加表单 -->
     <el-form :model="addUserDatd" :rules="addRules" ref="addFormRef">
@@ -68,7 +68,7 @@ export default {
           if (res.data.meta.status !== 201)
             return this.$message.error('添加失败')
           this.$message.success('添加成功')
-          this.$emit('addSuccess')
+          this.$emit('update-user-list')
           this.closeDialog()
         })
       })

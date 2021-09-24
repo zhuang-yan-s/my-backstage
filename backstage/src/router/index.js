@@ -12,7 +12,9 @@ const routes = [
     redirect: '/welcome',
     children: [
       { path: '/welcome', component: () => import('@/views/home/welcome/index.vue') },
-      { path: '/users', component: () => import('@/views/home/users/index.vue') }
+      { path: '/users', component: () => import('@/views/home/users/index.vue') },
+      { path: '/rights', component: () => import('@/views/home/rights/rightsList.vue') },
+      { path: '/roles', component: () => import('@/views/home/rights/roleList.vue') },
     ]
   }
 ]

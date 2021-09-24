@@ -2,7 +2,7 @@
   <!-- 添加用户弹窗 -->
   <el-dialog
     title="修改用户信息"
-    :visible="editShow"
+    :visible.sync="editShow"
     width="400px"
     @close="closeDialog"
   >
@@ -49,7 +49,7 @@ export default {
       http.put(`users/${this.editData.id}`, this.editTempData).then((res) => {
         if (res.data.meta.status !== 200) return this.$message.error('更新失败')
         this.$message.success('更新成功')
-        this.$emit('editSuccess')
+        this.$emit('update-user-list')
         this.closeDialog()
       })
     },
